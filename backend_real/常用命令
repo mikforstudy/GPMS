@@ -1,0 +1,1 @@
+生成需求文件pip freeze > requirements.txt安装需求文件pip install -r requirements.txt设置 Aerich初始化 Aerichaerich init -t app.config.TORTOISE_ORM初始化数据库和迁移aerich init-db生成迁移文件：aerich migrate# 带有名称的迁移<demo>，可以用于标识迁移的目的aerich migrate --name "add new fields to user"应用迁移：aerich upgrade
