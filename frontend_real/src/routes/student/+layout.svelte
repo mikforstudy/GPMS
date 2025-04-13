@@ -16,7 +16,11 @@
 
 <div class="h-screen grid grid-rows-[auto_1fr] bg-gray-50">
   <!-- 顶部标题栏 -->
+<<<<<<< HEAD
   <header class="sticky top-0 z-50">
+=======
+  <header class="sticky top-0 ">
+>>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
             <!-- 导航栏组件 -->
 
         <div class="navbar bg-base-100 shadow-sm">
@@ -52,7 +56,11 @@
                         <!-- 这是因为在点击“登出”链接时，SvelteKit 可能会使用客户端导航，
                          而不是完全重新加载页面。这意味着某些资源（如图片）可能不会立即重新加载。
                          要解决这个问题，可以在点击“登出”链接时强制浏览器进行完整的页面刷新。
+<<<<<<< HEAD
                          可以通过在 <a> 标签上添加 rel="external" 属性来实现这一点。 -->
+=======
+                         你可以通过在 <a> 标签上添加 rel="external" 属性来实现这一点。 -->
+>>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
                         <li><a href="/login" rel="external">登出</a></li>
                     </ul>
                 </div>
@@ -83,7 +91,11 @@
                     <details open>
                         <summary>选题分析</summary>
                         <ul>
+<<<<<<< HEAD
                             <li><a href="http://47.94.225.78:8080/">选题分析</a></li>
+=======
+                            <li><a href="https://chat.deepseek.com/">选题分析</a></li>
+>>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
                         </ul>
                     </details>
                 </li>
@@ -117,13 +129,21 @@
                         </ul>
                     </details>
                 </li>
+<<<<<<< HEAD
                 <li><a href="/student/export">导出所有文件</a></li>
+=======
+                <li><a href="/">待定</a></li>
+>>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
             </ul>
         </div>
     </aside>
 
     <!-- 主内容区域 -->
+<<<<<<< HEAD
     <main class="overflow-auto p-4 z-0">
+=======
+    <main class="overflow-auto p-4">
+>>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
     {@render children()}
     </main>
   </div>

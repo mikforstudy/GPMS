@@ -8,10 +8,13 @@ from .process_endpoint import router as process_router
 from .defense_endpoint import router as defense_router
 from .score_endpoint import router as score_router
 from .end_docx_endpoint import router as end_docx_router
+<<<<<<< HEAD
 from .file_output import router as file_output_router
 from .phase_time_endpoint import router as phase_time_router
 from .group_score_docx_endpoint import router as group_router
 from .end_file_endpoint import router as end_file_router
+=======
+>>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 
 
 router = APIRouter()
@@ -34,6 +37,7 @@ router.include_router(score_router, prefix="/score", tags=["score"])
 
 router.include_router(end_docx_router, prefix="/enddocx", tags=["enddocx"])
 
+<<<<<<< HEAD
 router.include_router(file_output_router, prefix="/file", tags=["file"])
 
 router.include_router(phase_time_router, prefix="/phase", tags=["phase"])
@@ -43,4 +47,6 @@ router.include_router(group_router, prefix="/group", tags=["group"])
 router.include_router(end_file_router, prefix="/endfile", tags=["endfile"])
 
 
+=======
+>>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 
