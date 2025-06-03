@@ -1,15 +1,10 @@
 <script>
-<<<<<<< HEAD
   
   import axios from 'axios';
   import "$lib/style.css";
 
 
   const apiUrl = import.meta.env.VITE_API_URL;
-=======
-  import axios from 'axios';
-  import "$lib/style.css";
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
   
   let student_id = 0;
   let username = '';
@@ -21,11 +16,7 @@
     console.log('密码:', password);
     console.log('用户类型:', userType);
 
-<<<<<<< HEAD
     axios.post(`${apiUrl}/api/v1/users/login`, {
-=======
-    axios.post('http://127.0.0.1:8000/api/v1/users/login', {
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
       'username': username,
       'password': password,
       'userType': userType
@@ -49,11 +40,7 @@
         if (userType === 'student') {
           window.location.href = '/student';
         } else if (userType === 'teacher') {
-<<<<<<< HEAD
           window.location.href = '/teacher/notify';
-=======
-          window.location.href = '/teacher';
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
         } else if (userType === 'admin') {
           window.location.href = '/admin';
         }

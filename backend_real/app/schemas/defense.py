@@ -27,11 +27,7 @@ class DefenseOut(BaseDefense):
     update_time: Optional[datetime]
     class Config:
         from_attributes = True
-<<<<<<< HEAD
 
-=======
-        orm_mode = True
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 
 class DefenseUpdateStatus(BaseModel):
     status: str

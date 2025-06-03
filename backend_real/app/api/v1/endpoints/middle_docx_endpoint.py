@@ -42,7 +42,7 @@ async def create_middle_docx_endpoint(middle_docx: MiddleDocxIn):
 # 下载中期报告word文档
 @router.get("/student/download/{student_id}", summary="下载中期报告word文档")
 async def download_middle_docx(student_id: int):
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id), 'middle_docx')
     file_path = os.path.join(output_dir, f'{student_id}_中期报告.docx')
 

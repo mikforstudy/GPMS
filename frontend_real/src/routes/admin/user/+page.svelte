@@ -138,40 +138,28 @@
               <label class="label">
                 <span class="label-text">用户名</span>
               </label>
-<<<<<<< HEAD
               <br>
-=======
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
               <input type="text" class="input input-bordered" bind:value={editingUser.username} required />
             </div>
             <div class="form-control">
               <label class="label">
                 <span class="label-text">角色</span>
               </label>
-<<<<<<< HEAD
               <br>
-=======
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
               <input type="text" class="input input-bordered" bind:value={editingUser.role} required />
             </div>
             <div class="form-control">
               <label class="label">
                 <span class="label-text">学生 ID</span>
               </label>
-<<<<<<< HEAD
               <br>
-=======
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
               <input type="number" class="input input-bordered" bind:value={editingUser.student_id} />
             </div>
             <div class="form-control">
               <label class="label">
                 <span class="label-text">教师 ID</span>
               </label>
-<<<<<<< HEAD
               <br>
-=======
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
               <input type="number" class="input input-bordered" bind:value={editingUser.teacher_id} />
             </div>
             <div class="modal-action">

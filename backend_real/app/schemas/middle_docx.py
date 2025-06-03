@@ -25,11 +25,7 @@ class MiddleDocxOut(MiddleDocxModel):
     status: Optional[str]
     class Config:
         from_attributes = True
-<<<<<<< HEAD
-
-=======
-        orm_mode = True
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
+5
 
 class MiddleDocxDetail(MiddleDocxOut):
     content1: Optional[str]
@@ -37,19 +33,12 @@ class MiddleDocxDetail(MiddleDocxOut):
     content7: Optional[str]
     class Config:
         from_attributes = True
-<<<<<<< HEAD
 
-=======
-        orm_mode = True
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 
 
 class MiddleDocxUpdateStatus(BaseModel):
     status: str
     content6: Optional[str] = None
     class Config:
-<<<<<<< HEAD
         from_attributes = True
-=======
-        orm_mode = True
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
+

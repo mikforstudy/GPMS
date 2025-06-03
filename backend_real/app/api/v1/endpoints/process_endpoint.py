@@ -11,7 +11,7 @@ router = APIRouter()
 # 上传过程文档文件，传入student_id和文件【可以上传多个文件】
 @router.post("/upload/{student_id}" , summary="上传过程文档文件", description="上传过程文档文件")
 async def upload_process_file(student_id: int, files: list[UploadFile] = File(...)):
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id), 'process')
     os.makedirs(output_dir, exist_ok=True)
 
@@ -26,7 +26,7 @@ async def upload_process_file(student_id: int, files: list[UploadFile] = File(..
 # 根据student_id获取过程文档文件列表，并返回文件大小和创建时间
 @router.get("/list/{student_id}" , summary="获取过程文档文件列表", description="获取过程文档文件列表")
 async def list_process_file(student_id: int):
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id), 'process')
     if os.path.exists(output_dir):
         file_list = []
@@ -42,7 +42,7 @@ async def list_process_file(student_id: int):
 # 根据student_id和文件名删除过程文档文件
 @router.delete("/delete/{student_id}" , summary="删除过程文档文件", description="删除过程文档文件")
 async def delete_process_file(student_id: int, file_name: str):
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id), 'process')
     file_path = os.path.join(output_dir, file_name)
     if os.path.exists(file_path):
@@ -62,7 +62,7 @@ async def get_teacher_process_files(teacher_name: str):
 
     # 2. 收集所有学生的过程文档
     result = []
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
 
     for project in projects:
         student_id = project.student_id
@@ -112,7 +112,7 @@ async def download_student_process_file(teacher_name: str, student_id: int, file
         )
 
     # 2. 构建文件路径并检查文件是否存在
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     file_path = os.path.join(project_root, 'output', str(student_id), 'process', file_name)
 
     if not os.path.exists(file_path):

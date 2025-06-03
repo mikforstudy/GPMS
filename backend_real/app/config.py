@@ -1,44 +1,29 @@
-from os import environ
 from typing import ClassVar
-from pydantic_settings import BaseSettings
-<<<<<<< HEAD
 from os import environ
 from pydantic_settings import BaseSettings
 import psycopg2
 from psycopg2 import OperationalError
 
-class Settings(BaseSettings):
-=======
 
 
 class Settings(BaseSettings):
     """
     配置类，优先读取环境变量，不存在则使用默认值
     """
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
     PROJECT_NAME: str = environ.get("PROJECT_NAME", "Graduation Project Management System")
     VERSION: str = environ.get("VERSION", "0.1.0")
     DEBUG: bool = environ.get("DEBUG", True)
 
     # 数据库配置
-<<<<<<< HEAD
     POSTGRES_HOST: str = environ.get("POSTGRES_HOST", "110.41.118.235")
     POSTGRES_PORT: str = environ.get("POSTGRES_PORT", "8000")
     POSTGRES_USER: str = environ.get("POSTGRES_USER", "grad_project")
     POSTGRES_PWD: str = environ.get("POSTGRES_PWD", "Grad123@")
     POSTGRES_DB: str = environ.get("POSTGRES_DB", "mik")
-=======
-    POSTGRES_HOST: str = environ.get("POSTGRES_HOST", "127.0.0.1")
-    POSTGRES_PORT: str = environ.get("POSTGRES_PORT", "5432")
-    POSTGRES_USER: str = environ.get("POSTGRES_USER", "postgres")
-    POSTGRES_PWD: str = environ.get("POSTGRES_PWD", "admin")
-    POSTGRES_DB: str = environ.get("POSTGRES_DB", "postgres_demo")
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
     DB_POOL_MAX: int = int(environ.get("DB_POOL_MAX", 20))
     DB_POOL_CONN_LIFE: int = int(environ.get("DB_POOL_CONN_LIFE", 600))
     TIMEZONE: str = environ.get("TIMEZONE", "Asia/Shanghai")
 
-<<<<<<< HEAD
     # 指定连接后使用的 schema
     POSTGRES_SCHEMA: str = environ.get("POSTGRES_SCHEMA", "mik_schema")
 
@@ -46,12 +31,7 @@ class Settings(BaseSettings):
         "connections": {
             "default": {
                 "engine": "tortoise.backends.psycopg",  # 使用 psycopg 引擎
-=======
-    TORTOISE_ORM: ClassVar[dict] = {
-        "connections": {
-            "default": {
-                "engine": "tortoise.backends.asyncpg",
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
+
                 "credentials": {
                     "database": POSTGRES_DB,
                     "host": POSTGRES_HOST,
@@ -59,12 +39,9 @@ class Settings(BaseSettings):
                     "port": POSTGRES_PORT,
                     "user": POSTGRES_USER,
                     "maxsize": DB_POOL_MAX,
-<<<<<<< HEAD
                     "ssl": False,
-                    "schema": POSTGRES_SCHEMA
-=======
+                    "schema": POSTGRES_SCHEMA,
                     "ssl": False
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
                 },
             }
         },
@@ -79,11 +56,6 @@ class Settings(BaseSettings):
     }
 
 settings = Settings()
-<<<<<<< HEAD
-TORTOISE_ORM = settings.TORTOISE_ORM
-=======
+
 TORTOISE_ORM = settings.TORTOISE_ORM
 
-
-
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645

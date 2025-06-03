@@ -1,14 +1,12 @@
-<<<<<<< HEAD
+
 import asyncio
 import sys
-=======
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
+
 from datetime import datetime
 
 from app.models.project import Project
 from app.models.defense import Defense
 from app.models.user import User
-<<<<<<< HEAD
 from tortoise import Tortoise
 
 
@@ -58,7 +56,7 @@ async def generate_defense_data():
         print(f"已为{len(projects)}个项目创建了{defense_count}条答辩记录")
     except Exception as e:
         print(f"错误: {str(e)}")
-=======
+
 
 
 # 从projects表中获取所有项目，每一条项目创建三条答辩信息，defense_phase分别为"开题答辩"、"中期答辩"、"最终答辩"
@@ -102,12 +100,10 @@ async def generate_defense_data():
             n += 1
 
     print(f"已为{len(projects)}个项目创建了{defense_count}条答辩记录")
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 
 
 # 直接执行时的入口点
 if __name__ == "__main__":
-<<<<<<< HEAD
     from tortoise import Tortoise
     from app.config import TORTOISE_ORM, settings
 
@@ -139,7 +135,7 @@ if __name__ == "__main__":
         finally:
             # 确保连接关闭
             await Tortoise.close_connections()
-=======
+
     import asyncio
     from tortoise import Tortoise
     from app.config import TORTOISE_ORM
@@ -154,7 +150,6 @@ if __name__ == "__main__":
 
         # 关闭连接
         await Tortoise.close_connections()
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 
 
     # 运行异步主函数

@@ -28,7 +28,7 @@ async def get_project_base(student_id: int):
 
 
 # 教师根据teacher_name查询项目
-<<<<<<< HEAD
+
 @router.get("/teacher/{teacher_name}", response_model=None, summary="教师查询项目", status_code=status.HTTP_200_OK)
 async def get_projects(teacher_name: str):
     projects = await Project.filter(teacher_name=teacher_name).all()
@@ -51,12 +51,11 @@ async def get_projects(teacher_name: str):
         result.append(project_data)
 
     return result
-=======
+
 @router.get("/teacher/{teacher_name}", response_model=list[ProjectOut], summary="教师查询项目", status_code=status.HTTP_200_OK)
 async def get_projects(teacher_name: str):
     projects = await Project.filter(teacher_name=teacher_name).all()
     return [ProjectOut.model_validate(project) for project in projects]
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 
 
 

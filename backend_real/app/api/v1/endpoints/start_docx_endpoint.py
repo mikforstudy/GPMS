@@ -17,7 +17,7 @@ async def create_start_docx_endpoint(start_docx: StartDocxIn):
     start_docx_obj = await StartDocx.create(**start_docx.dict())
 
     # 获取项目根目录
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output',str(start_docx.student_id), 'start_docx')
     os.makedirs(output_dir, exist_ok=True)
 
@@ -45,7 +45,7 @@ async def create_start_docx_endpoint(start_docx: StartDocxIn):
 # 下载开题报告word文档
 @router.get("/student/download/{student_id}", summary="下载开题报告word文档")
 async def download_start_docx(student_id: int):
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id), 'start_docx')
     file_path = os.path.join(output_dir, f'{student_id}_开题报告.docx')
 
@@ -87,7 +87,7 @@ async def update_start_docx_status(student_id: int, start_docx: StartDocxUpdateS
         await Project.filter(student_id=student_id).update(status="通过开题报告", update_time=datetime.now())
 
     # 获取项目根目录
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id), 'start_docx')
     os.makedirs(output_dir, exist_ok=True)
 

@@ -7,11 +7,7 @@
   let score = null;
   let loading = true;
   let error = null;
-<<<<<<< HEAD
   let noScoreFound = false;  // 表示成绩不存在
-=======
-  let noScoreFound = false;  // 新增状态，表示成绩不存在
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 
   onMount(() => {
     if (typeof window !== 'undefined') {
@@ -24,12 +20,8 @@
   async function fetchScore() {
     try {
       loading = true;
-<<<<<<< HEAD
       // 使用新的API接口路径
       const response = await axios.get(`http://127.0.0.1:8000/api/v1/group/student/${student_id}/score`);
-=======
-      const response = await axios.get(`http://127.0.0.1:8000/api/v1/score/student/${student_id}`);
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
       score = response.data;
       loading = false;
     } catch (err) {
@@ -48,7 +40,6 @@
     }
   }
 
-<<<<<<< HEAD
   // 根据分数获取等级
   function getGradeFromScore(score) {
     if (score >= 90) return '优秀';
@@ -60,11 +51,6 @@
   // 获取成绩对应的样式
   function getScoreStyle(grade) {
     switch(grade) {
-=======
-  // 获取成绩对应的样式
-  function getScoreStyle(score) {
-    switch(score) {
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
       case '优秀':
         return 'text-emerald-500 bg-emerald-50';
       case '良好':
@@ -80,13 +66,9 @@
   
   // 格式化日期
   function formatDate(dateString) {
-<<<<<<< HEAD
     if (!dateString) return '未知日期';
     
     const date = new Date();
-=======
-    const date = new Date(dateString);
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
     return date.toLocaleDateString('zh-CN', {
       year: 'numeric',
       month: 'long',
@@ -135,11 +117,7 @@
       <!-- 成绩卡片顶部 -->
       <div class="bg-blue-600 text-white px-6 py-4">
         <h2 class="text-xl font-semibold">毕业论文（设计）成绩单</h2>
-<<<<<<< HEAD
         <!-- <p class="text-blue-100 text-sm">成绩评定日期: {formatDate()}</p> -->
-=======
-        <p class="text-blue-100 text-sm">成绩评定日期: {formatDate(score.update_time)}</p>
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
       </div>
       
       <!-- 成绩信息 -->
@@ -149,14 +127,9 @@
           <div>
             <p class="text-sm text-gray-600 mb-1">论文（设计）最终成绩</p>
             <div class="flex items-center">
-<<<<<<< HEAD
               <span class="text-3xl font-bold mr-3">{score.score4}分</span>
               <span class={`px-3 py-1 text-sm rounded-full ${getScoreStyle(getGradeFromScore(score.score4))}`}>
                 {getGradeFromScore(score.score4)}
-=======
-              <span class={`text-3xl font-bold px-4 py-2 rounded-lg ${getScoreStyle(score.score)}`}>
-                {score.score}
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
               </span>
             </div>
           </div>
@@ -168,7 +141,6 @@
           </div>
         </div>
         
-<<<<<<< HEAD
         <!-- 详细评分信息 -->
         <div class="mb-6">
           <h3 class="text-lg font-medium mb-4">评分详情</h3>
@@ -189,31 +161,6 @@
               <div class="text-sm text-gray-500 mb-1">答辩委员会评分</div>
               <div class="text-xl font-semibold">{score.score3}<span class="text-sm text-gray-500 ml-1">分</span></div>
               <div class="mt-1 text-xs">{getGradeFromScore(score.score3)}</div>
-=======
-        <!-- 详细信息网格 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="space-y-4">
-            <!-- 左侧信息 -->
-            <div>
-              <p class="text-sm text-gray-500">学生ID</p>
-              <p class="font-medium">{score.student_id}</p>
-            </div>
-            <div>
-              <p class="text-sm text-gray-500">指导教师</p>
-              <p class="font-medium">{score.teacher_name}</p>
-            </div>
-          </div>
-          
-          <div class="space-y-4">
-            <!-- 右侧信息 -->
-            <div>
-              <p class="text-sm text-gray-500">论文（设计）题目</p>
-              <p class="font-medium">{score.project_title}</p>
-            </div>
-            <div>
-              <p class="text-sm text-gray-500">评定时间</p>
-              <p class="font-medium">{formatDate(score.created_time)}</p>
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
             </div>
           </div>
         </div>
@@ -235,11 +182,7 @@
     </div>
     
     <!-- 成绩详情卡片 -->
-<<<<<<< HEAD
     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-=======
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
       <!-- 指导教师评语卡片 -->
       <div class="bg-white rounded-lg shadow-md p-6">
         <h3 class="font-medium text-gray-900 mb-4 flex items-center">
@@ -249,7 +192,6 @@
           指导教师评语
         </h3>
         <p class="text-gray-600 text-sm italic">
-<<<<<<< HEAD
           "{score.content1 || '暂无评语'}"
         </p>
       </div>
@@ -265,32 +207,19 @@
         </h3>
         <p class="text-gray-600 text-sm italic">
           "{score.content2 || '暂无评语'}"
-=======
-          "该学生在毕业设计过程中表现出色，能够独立思考问题，并提出创新性解决方案。
-          论文结构清晰，研究方法得当，实验结果可靠。"
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
         </p>
       </div>
       
       <!-- 答辩委员会意见卡片 -->
       <div class="bg-white rounded-lg shadow-md p-6">
         <h3 class="font-medium text-gray-900 mb-4 flex items-center">
-<<<<<<< HEAD
           <svg class="h-5 w-5 text-purple-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-=======
-          <svg class="h-5 w-5 text-blue-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
             <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-1a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v1h-3zM4.75 12.094A5.973 5.973 0 004 15v1H1v-1a3 3 0 013.75-2.906z" />
           </svg>
           答辩委员会意见
         </h3>
         <p class="text-gray-600 text-sm italic">
-<<<<<<< HEAD
           "{score.content3 || '暂无评语'}"
-=======
-          "答辩过程中，学生能够清晰表达研究内容，回答问题准确到位。
-          论文内容充实，具有一定的学术价值和实用价值。"
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
         </p>
       </div>
     </div>

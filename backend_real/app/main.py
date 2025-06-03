@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import sys
 import psycopg2
 from psycopg2 import OperationalError
@@ -30,7 +30,7 @@ app = FastAPI(
     debug=settings.DEBUG,
     lifespan=lifespan  # 替代废弃的 on_event
 )
-=======
+
 from fastapi import FastAPI
 from tortoise.contrib.fastapi import register_tortoise
 
@@ -42,15 +42,14 @@ from app.api.v1.endpoints import router as v1_router
 from fastapi.middleware.cors import CORSMiddleware
 
 
-app = FastAPI(title=settings.PROJECT_NAME, version=settings.VERSION, debug=settings.DEBUG)
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
+
 
 # 注册路由
 app.include_router(v1_router, prefix="/api/v1")
 
-<<<<<<< HEAD
+
 # 添加 CORS 中间件
-=======
+
 # 初始化Tortoise ORM
 register_tortoise(
     app,
@@ -59,7 +58,7 @@ register_tortoise(
     add_exception_handlers=True,
 )
 
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=['*'],
@@ -68,7 +67,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-<<<<<<< HEAD
+
 # Windows 事件循环兼容性设置
 if sys.platform.startswith("win"):
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
@@ -156,11 +155,6 @@ def test():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
-=======
 
-if __name__ == "__main__":
-    import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=8000)
 
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645

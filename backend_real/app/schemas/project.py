@@ -21,9 +21,5 @@ class ProjectOut(ProjectBase):
     teacher_name: Optional[str]
     class Config:
         from_attributes = True
-<<<<<<< HEAD
 
-=======
-        orm_mode = True
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
 

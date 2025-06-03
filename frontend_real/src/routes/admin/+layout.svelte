@@ -15,11 +15,8 @@
                     >大学生毕业论文（设计）管理系统</a
                 >
             </div>
-<<<<<<< HEAD
             <a class="mr-8" href="/system/system_front">前端服务检测</a>
             <a class="mr-8" href="/system/system_end">后端服务监测</a>
-=======
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
             <a class="mr-8" href="http://chat.deepseek.com">帮助</a>
             <div class="flex gap-4">
                 <div class="dropdown dropdown-end">
@@ -43,7 +40,7 @@
                             <a class="justify-between">Profile</a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><a href="/login" rel="external">登出</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,37 +61,12 @@
                         <details open>
                             <summary>系统管理</summary>
                             <ul>
-<<<<<<< HEAD
                                 <li><a href="/admin/time">时间管理</a></li>
                                 <li><a href="/admin/user">用户管理</a></li>
                                 <li><a href="/admin/selection">选题管理</a></li>
-                                <li>
-                                    <details close>
-                                        <summary>保留样式</summary>
-                                        <ul>
-                                            <li><a>保留样式/a></li>
-                                            <li><a>保留样式</a></li>
-=======
-                                <li><a href="/admin/user">用户管理</a></li>
-                                <li><a href="/admin/selection">选题管理</a></li>
-                                <li>
-                                    <details open>
-                                        <summary>Parent</summary>
-                                        <ul>
-                                            <li><a>Submenu 1</a></li>
-                                            <li><a>Submenu 2</a></li>
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
-                                        </ul>
-                                    </details>
-                                </li>
                             </ul>
                         </details>
                     </li>
-<<<<<<< HEAD
-                    <li><a>保留样式</a></li>
-=======
-                    <li><a>Item 3</a></li>
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
                 </ul>
             </div>
         </aside>

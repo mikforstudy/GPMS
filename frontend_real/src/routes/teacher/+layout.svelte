@@ -77,11 +77,7 @@
                     <details open>
                         <summary>选题分析</summary>
                         <ul>
-<<<<<<< HEAD
                             <li><a href="http://47.94.225.78:8080/" target="_blank">选题分析</a></li>
-=======
-                            <li><a href="/">选题分析</a></li>
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
                         </ul>
                     </details>
                 </li>
@@ -113,18 +109,11 @@
                             <!-- <li><a href="/">答辩记录</a></li>
                               -->
                             <li><a href="/teacher/score">成绩</a></li>
-<<<<<<< HEAD
                             <li><a href="/teacher/score_docx">受邀评阅</a></li>
                         </ul>
                     </details>
                 </li>
                 <li><a href="/teacher/export">导出学生文件</a></li>
-=======
-                        </ul>
-                    </details>
-                </li>
-                <li><a href="/">待定</a></li>
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
             </ul>
         </div>
     </aside>

@@ -100,7 +100,7 @@ async def update_student_score_docx(student_id: int, score_docx: BaseScoreDocx):
     score_docx_obj.project_title = project.title
 
     # 调用replace_text_in_docx函数生成Word文档
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id), 'score_docx')
     os.makedirs(output_dir, exist_ok=True)
     input_file = os.path.join(project_root, 'template', '本科毕业设计成绩评审表.docx')

@@ -163,11 +163,7 @@
                         />
                         <button 
                             type="button"
-<<<<<<< HEAD
                             class="btn btn-square btn-outline mt-1.5"
-=======
-                            class="btn btn-square btn-outline"
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
                             on:click={() => showOldPassword = !showOldPassword}
                         >
                             {#if showOldPassword}
@@ -193,11 +189,7 @@
                         />
                         <button 
                             type="button"
-<<<<<<< HEAD
                             class="btn btn-square btn-outline mt-1.5"
-=======
-                            class="btn btn-square btn-outline"
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
                             on:click={() => showNewPassword = !showNewPassword}
                         >
                             {#if showNewPassword}
@@ -223,11 +215,7 @@
                         />
                         <button 
                             type="button"
-<<<<<<< HEAD
                             class="btn btn-square btn-outline mt-1.5"
-=======
-                            class="btn btn-square btn-outline"
->>>>>>> 47363d5289e4ea5cbd9a708e0f5c34c133007645
                             on:click={() => showConfirmPassword = !showConfirmPassword}
                         >
                             {#if showConfirmPassword}

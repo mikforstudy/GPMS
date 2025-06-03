@@ -11,7 +11,7 @@ router = APIRouter()
 # 学生根据学生id导出所有文件的压缩包
 @router.get("/student/{student_id}", summary="学生导出文件", status_code=200)
 async def export_files(student_id: int):
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id))
     print(output_dir)
     # 检查目录是否存在
@@ -60,7 +60,7 @@ async def export_files(student_id: int):
 # 教师根据学生id导出所有文件的压缩包
 @router.get("/teacher/{student_id}", summary="教师导出文件", status_code=200)
 async def export_files(student_id: int):
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(student_id))
     print(output_dir)
     # 检查目录是否存在

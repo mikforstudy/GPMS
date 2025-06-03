@@ -18,7 +18,7 @@ async def create_end_docx_endpoint(end_docx: EndDocxIn):
     end_docx_obj = await EndDocx.create(**end_docx.dict())
 
     # 获取项目根目录
-    project_root = 'D:\\Code\\demo\\backend_real'
+    project_root = 'D:\\Code\\GPMS\\backend_real'
     output_dir = os.path.join(project_root, 'output', str(end_docx.student_id), 'end_docx')
     os.makedirs(output_dir, exist_ok=True)
 
