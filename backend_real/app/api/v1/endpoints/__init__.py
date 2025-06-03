@@ -14,6 +14,8 @@ from .phase_time_endpoint import router as phase_time_router
 from .group_score_docx_endpoint import router as group_router
 from .end_file_endpoint import router as end_file_router
 
+from app.api.v1.endpoints.data_gen_endpoint import router as data_gen_router
+
 
 router = APIRouter()
 
@@ -42,6 +44,8 @@ router.include_router(phase_time_router, prefix="/phase", tags=["phase"])
 router.include_router(group_router, prefix="/group", tags=["group"])
 
 router.include_router(end_file_router, prefix="/endfile", tags=["endfile"])
+
+router.include_router(data_gen_router, prefix="/data-gen", tags=["data-gen"])
 
 
 

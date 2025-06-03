@@ -28,7 +28,7 @@ async def generate_defense_data():
             queryset = await User.filter(student_id=project.student_id).first()
             student_name = queryset.username if queryset else "未知学生"
 
-            # 检查是否已有3条答辩记录
+            # 检查是否已有3条答辩安排
             existing_defenses = await Defense.filter(student_id=project.student_id).count()
             if existing_defenses >= 3:
                 continue
@@ -53,7 +53,7 @@ async def generate_defense_data():
                 defense_count += 1
                 n += 1
 
-        print(f"已为{len(projects)}个项目创建了{defense_count}条答辩记录")
+        print(f"已为{len(projects)}个项目创建了{defense_count}组答辩安排")
     except Exception as e:
         print(f"错误: {str(e)}")
 

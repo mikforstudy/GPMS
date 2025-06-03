@@ -67,6 +67,15 @@
                             </ul>
                         </details>
                     </li>
+                    <li>
+                        <details open>
+                            <summary>系统检测</summary>
+                            <ul>
+                                <li><a href="/system/system_front">前端服务检测</a></li>
+                                <li><a href="/system/system_end">后端服务监测</a></li>
+                            </ul>
+                        </details>
+                    </li>
                 </ul>
             </div>
         </aside>

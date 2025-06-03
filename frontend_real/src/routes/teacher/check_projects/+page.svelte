@@ -29,11 +29,11 @@
     <thead>
       <tr>
         <th></th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Status</th>
-        <th>Start Date</th>
-        <th>Update Time</th>
+        <th>题目</th>
+        <th>描述</th>
+        <th>状态</th>
+        <th>开始日期</th>
+        <th>更新日期</th>
       </tr>
     </thead>
     <tbody>
