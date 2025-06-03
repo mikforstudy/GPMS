@@ -76,6 +76,15 @@
                             </ul>
                         </details>
                     </li>
+                    <li>
+                        <details open>
+                            <summary>系统检测</summary>
+                            <ul>
+                                <li><a href="/admin/gen_defense_data">答辩数据生成</a></li>
+                                <li><a href="/admin/gen_group_data">评分组数据生成</a></li>
+                            </ul>
+                        </details>
+                    </li>
                 </ul>
             </div>
         </aside>
